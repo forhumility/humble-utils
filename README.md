@@ -10,18 +10,18 @@
 npm i humble-utils --save
 ```
 
-### import date format
+### import date dateFormat
 
 ``` javascript
-import { format } from "humble-utils";
+import { dateFormat } from "humble-utils";
 ```
 
-### using date format
+### using date dateFormat
 
 ``` javascript
 let fmt;
-fmt = format(new Date()); // "1996-07-22 13:14:00"
-fmt = format(new Date(),"MM-dd"); // "07-22"
+fmt = dateFormat(new Date()); // "1996-07-22 13:14:00"
+fmt = dateFormat(new Date(),"MM-dd"); // "07-22"
 ```
 
 ## API
@@ -30,12 +30,12 @@ Common application program interface
 
 ### Date
 
-> format
+> dateFormat
 
 ``` javascript
-format(date);
+dateFormat(date);
 
-format(date,"yyyy-MM-dd");
+dateFormat(date,"yyyy-MM-dd");
 ```
 
 ### Array
