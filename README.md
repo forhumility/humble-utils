@@ -56,4 +56,4 @@ format(date,"yyyy-MM-dd");
 
 ## License
 
-> Day.js is licensed under a [MIT](https://opensource.org/licenses/MIT/) License.
+> humble-utils is licensed under a [MIT](https://opensource.org/licenses/MIT/) License.
