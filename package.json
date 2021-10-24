@@ -1,0 +1,17 @@
+{
+  "name": "humble-utils",
+  "version": "0.1.3",
+  "description": "javascript utils",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "humility",
+    "humble",
+    "utils",
+    "format"
+  ],
+  "author": "humility",
+  "license": "MIT"
+}
