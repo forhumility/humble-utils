@@ -1,3 +1,12 @@
+<!--
+ * @Author       : Humility
+ * @Date         : 2021-10-25 08:40:28
+ * @LastEditTime : 2021-10-25 17:48:24
+ * @LastEditors  : Humility
+ * @FilePath     : \humble-utils\README.md
+ * @Description  : README
+-->
+
 # Humble Utils
 
 > A humble utils
@@ -33,25 +42,36 @@ Common application program interface
 > dateFormat
 
 ``` javascript
-dateFormat(date);
+dateFormat(date); // 1996-07-22 13:14:00
+dateFormat(date,"yyyy-MM-dd"); // 1996-07-22
+```
 
-dateFormat(date,"yyyy-MM-dd");
+> dateOfYear
+
+``` javascript
+dateOfYear(date); // 204
+```
+
+> dateDiffer
+
+``` javascript
+dateDiffer(date1,date2); // 204
 ```
 
 ### Array
 
-> array tools
+> shuffle
 
 ``` javascript
-// development pending
+shuffle(arr); // arr shuffle
 ```
 
 ### Object
 
-> object tools
+> isObjectEqual
 
 ``` javascript
-// development pending
+isObjectEqual(obj1,obj2); // isObjectEqual
 ```
 
 ## License
