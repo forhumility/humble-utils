@@ -3,8 +3,8 @@
  * @Date         : 2021-10-24 19:00:10
  * @LastEditTime : 2021-10-24 20:30:01
  * @LastEditors  : Humility
- * @FilePath     : \humble-utils\module\judgment.js
- * @Description  : judgment tools
+ * @FilePath     : \humble-utils\module\check.js
+ * @Description  : check tools
  */
 
 /** 正则 */
