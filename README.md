@@ -1,7 +1,7 @@
 <!--
  * @Author       : Humility
  * @Date         : 2021-10-25 08:40:28
- * @LastEditTime : 2021-10-25 17:48:24
+ * @LastEditTime : 2021-10-26 14:24:08
  * @LastEditors  : Humility
  * @FilePath     : \humble-utils\README.md
  * @Description  : README
@@ -19,61 +19,56 @@
 npm i humble-utils --save
 ```
 
-### import date dateFormat
+### import method
 
 ``` javascript
+// example: import dateFormat
+
 import { dateFormat } from "humble-utils";
 ```
 
-### using date dateFormat
+### using method
 
 ``` javascript
+// example: using dateFormat
+
 let fmt;
+
 fmt = dateFormat(new Date()); // "1996-07-22 13:14:00"
+
 fmt = dateFormat(new Date(),"MM-dd"); // "07-22"
 ```
 
 ## API
 
-Common application program interface
-
-### Date
-
-> dateFormat
-
-``` javascript
-dateFormat(date); // 1996-07-22 13:14:00
-dateFormat(date,"yyyy-MM-dd"); // 1996-07-22
-```
-
-> dateOfYear
-
-``` javascript
-dateOfYear(date); // 204
-```
-
-> dateDiffer
-
-``` javascript
-dateDiffer(date1,date2); // 204
-```
+- Common application program interface.
+- You can find for more details, API, and other docs on
+[documentation](http://hu.newzoo.xyz/) website.
 
 ### Array
 
-> shuffle
+> Array methods
 
-``` javascript
-shuffle(arr); // arr shuffle
-```
+### Check
+
+> Check methods
+
+### Date
+
+> Date methods
 
 ### Object
 
-> isObjectEqual
+> Object methods
 
-``` javascript
-isObjectEqual(obj1,obj2); // isObjectEqual
-```
+### String
+
+> String methods
 
 ## License
 
 > humble-utils is licensed under a [MIT](https://opensource.org/licenses/MIT/) License.
+
+## Keywords
+
+humility humble common utils methods
