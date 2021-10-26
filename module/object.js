@@ -1,7 +1,7 @@
 /*
  * @Author       : Humility
  * @Date         : 2021-10-23 23:36:50
- * @LastEditTime : 2021-10-26 20:12:01
+ * @LastEditTime : 2021-10-26 21:58:41
  * @LastEditors  : Humility
  * @FilePath     : \humble-utils\module\object.js
  * @Description  : 对象工具
@@ -14,7 +14,7 @@
  * @param {Object} obj2 第二个对象
  * @return {Boolean} 是否相同
  */
-export const isObjectEqual = (obj1, obj2) => {
+export function isObjectEqual(obj1, obj2) {
     let aProps = Object.getOwnPropertyNames(obj1);
     let bProps = Object.getOwnPropertyNames(obj2);
 

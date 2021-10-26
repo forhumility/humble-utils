@@ -1,7 +1,7 @@
 /*
  * @Author       : Humility
  * @Date         : 2021-10-23 23:12:04
- * @LastEditTime : 2021-10-26 20:58:54
+ * @LastEditTime : 2021-10-26 21:52:26
  * @LastEditors  : Humility
  * @FilePath     : \humble-utils\module\array.js
  * @Description  : array tools
@@ -12,7 +12,7 @@
  * @param {Array} arr 需要打乱的数组
  * @return {Array} 打乱后的数组
  */
-export const shuffle = (arr) => {
+export function shuffle(arr) {
     let result = [],
         random;
     while (arr.length > 0) {
@@ -28,7 +28,7 @@ export const shuffle = (arr) => {
  * @param {*} val 需要判断的值
  * @return {Boolean}
  */
-export const contains = (arr, val) => {
+export function contains(arr, val) {
     return arr.indexOf(val) != -1 ? true : false;
 };
 /**
@@ -38,7 +38,7 @@ export const contains = (arr, val) => {
  * @param {Number} type 排序类型
  * @return {Array} 排序后的数组
  */
-export const sort = (arr, type = 1) => {
+export function sort(arr, type = 1) {
     return arr.sort((a, b) => {
         switch (type) {
             case 1:
@@ -57,21 +57,25 @@ export const sort = (arr, type = 1) => {
  * @param {Array} arr 目标数组
  * @return {Array} 去除后的数组
  */
-export const unique = (arr) => [...new Set(arr)];
+export function unique(arr) {
+    return [...new Set(arr)];
+};
 /**
  * 两个数组的并集
  * @param {Array} arr1 第一个数组
  * @param {Array} arr2 第二个数组
  * @return {Array} 数组的并集
  */
-export const union = (arr1, arr2) => [...arr1, ...arr2];
+export function union(arr1, arr2) {
+    return [...arr1, ...arr2]
+};
 /**
  * 两个数组的交集
  * @param {Array} arr1 第一个数组
  * @param {Array} arr2 第二个数组
  * @return {Array} 数组的交集
  */
-export const intersect = (arr1, arr2) => {
+export function intersect(arr1, arr2) {
     let that = this;
     arr1 = this.unique(arr1);
     return this.map(arr1, function(o) {
@@ -84,7 +88,7 @@ export const intersect = (arr1, arr2) => {
  * @param {*} ele 需要删除的元素
  * @return {Array} 删除该数组第一个元素后的数组
  */
-export const removeOne = (arr, ele) => {
+export function removeOne(arr, ele) {
     let index = arr.indexOf(ele);
     if (index > -1) {
         arr.splice(index, 1);
@@ -97,7 +101,7 @@ export const removeOne = (arr, ele) => {
  * @param {*} ele 需要删除的元素
  * @return {Array} 删除该数组该元素后的数组
  */
-export const removeAll = (arr, ele) => {
+export function removeAll(arr, ele) {
     let newArr = [];
     for (let i = 0, len = arr.length; i < len; i++) {
         let a = arr[i];

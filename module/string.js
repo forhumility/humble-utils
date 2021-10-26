@@ -1,7 +1,7 @@
 /*
  * @Author       : Humility
  * @Date         : 2021-10-24 21:37:35
- * @LastEditTime : 2021-10-26 20:36:34
+ * @LastEditTime : 2021-10-26 21:59:56
  * @LastEditors  : Humility
  * @FilePath     : \humble-utils\module\string.js
  * @Description  : string tools
@@ -12,7 +12,7 @@
  * @param {String} pwd 密码
  * @return {Number} 密码强度
  */
-export const checkPwd = (pwd) => {
+export function checkPwd(pwd) {
     let Lv = 0;
     if (pwd.length < 6) {
         return Lv
@@ -38,7 +38,7 @@ export const checkPwd = (pwd) => {
  * @param {Number} type 去空格类型
  * @return {String} 去除空格后的字符串
  */
-export const trim = (str, type = 1) => {
+export function trim(str, type = 1) {
     type = type || 1
     switch (type) {
         case 1:
@@ -60,7 +60,7 @@ export const trim = (str, type = 1) => {
  * @param {Number} type 转换类型
  * @return {String}
  */
-export const changeCase = (str, type = 4) => {
+export function changeCase(str, type = 4) {
     switch (type) {
         case 1:
             return str.replace(/\b\w+\b/g, function(word) {
@@ -93,7 +93,7 @@ export const changeCase = (str, type = 4) => {
  * @param {String} newStr 需要插入的字符串
  * @return {String} 插入字符串后的新字符串
  */
-export const insertStr = (soure, index = 1, newStr = '') => {
+export function insertStr(soure, index = 1, newStr = '') {
     let str = soure.slice(0, index) + newStr + soure.slice(index);
     return str;
 };
@@ -103,7 +103,7 @@ export const insertStr = (soure, index = 1, newStr = '') => {
  * @param {Number} opa 透明度
  * @return {String} RGB/RGBA字符串
  */
-export const hexToRGB = (val, opa = 1) => {
+export function hexToRGB(val, opa = 1) {
     let pattern = /^(#?)[a-fA-F0-9]{6}$/; //16进制颜色值校验规则
     let isOpa = typeof opa == 'number'; //判断是否有设置不透明度
     if (!pattern.test(val)) { //如果值不符合规则返回空字符
@@ -128,4 +128,6 @@ export const hexToRGB = (val, opa = 1) => {
  * @param {Number} b 蓝色通道
  * @return {String} 16进制颜色
  */
-export const rgbToHex = (r, g, b) => "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+export function rgbToHex(r, g, b) {
+    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+};
