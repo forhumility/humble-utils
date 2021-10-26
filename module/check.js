@@ -1,7 +1,7 @@
 /*
  * @Author       : Humility
  * @Date         : 2021-10-24 19:00:10
- * @LastEditTime : 2021-10-26 20:59:26
+ * @LastEditTime : 2021-10-26 21:56:59
  * @LastEditors  : Humility
  * @FilePath     : \humble-utils\module\check.js
  * @Description  : check tools
@@ -11,7 +11,7 @@
  * @param {String} str 邮箱
  * @return {Boolean} 验证结果
  */
-export const isEmail = (str) => {
+export function isEmail(str) {
     return /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((.[a-zA-Z0-9_-]{2,3}){1,2})$/.test(str)
 };
 /**
@@ -19,7 +19,7 @@ export const isEmail = (str) => {
  * @param {String} str 电话
  * @return {Boolean} 验证结果
  */
-export const isMobile = (str) => {
+export function isMobile(str) {
     return /^1[0-9]{10}$/.test(str)
 };
 /**
@@ -27,7 +27,7 @@ export const isMobile = (str) => {
  * @param {String} str 手机号
  * @return {Boolean} 验证结果
  */
-export const isPhone = (str) => {
+export function isPhone(str) {
     return /^([0-9]{3,4}-)?[0-9]{7,8}$/.test(str)
 };
 /**
@@ -35,7 +35,7 @@ export const isPhone = (str) => {
  * @param {String} str 链接地址
  * @return {Boolean} 验证结果
  */
-export const isURL = (str) => {
+export function isURL(str) {
     return /^http[str]?:\/\/.*/.test(str)
 };
 /**
@@ -43,7 +43,7 @@ export const isURL = (str) => {
  * @param {String} target 字符串
  * @return {Boolean} 验证结果
  */
-export const isString = (target) => {
+export function isString(target) {
     return Object.prototype.toString.call(target).slice(8, -1) === 'String'
 };
 /**
@@ -51,7 +51,7 @@ export const isString = (target) => {
  * @param {String} target 数值
  * @return {Boolean} 验证结果
  */
-export const isNumber = (target) => {
+export function isNumber(target) {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Number'
 };
 /**
@@ -59,7 +59,7 @@ export const isNumber = (target) => {
  * @param {String} target 布尔型
  * @return {Boolean} 验证结果
  */
-export const isBoolean = (target) => {
+export function isBoolean(target) {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Boolean'
 };
 /**
@@ -67,7 +67,7 @@ export const isBoolean = (target) => {
  * @param {String} target 方法
  * @return {Boolean} 验证结果
  */
-export const isFunction = (target) => {
+export function isFunction(target) {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Function'
 };
 /**
@@ -75,7 +75,7 @@ export const isFunction = (target) => {
  * @param {String} target 空
  * @return {Boolean} 验证结果
  */
-export const isNull = (target) => {
+export function isNull(target) {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Null'
 };
 /**
@@ -83,7 +83,7 @@ export const isNull = (target) => {
  * @param {String} target 未定义
  * @return {Boolean} 验证结果
  */
-export const isUndefined = (target) => {
+export function isUndefined(target) {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Undefined'
 };
 /**
@@ -91,7 +91,7 @@ export const isUndefined = (target) => {
  * @param {String} target 对象
  * @return {Boolean} 验证结果
  */
-export const isObject = (target) => {
+export function isObject(target) {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Object'
 };
 /**
@@ -99,7 +99,7 @@ export const isObject = (target) => {
  * @param {String} target 数组
  * @return {Boolean} 验证结果
  */
-export const isArray = (target) => {
+export function isArray(target) {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Array'
 };
 /**
@@ -107,7 +107,7 @@ export const isArray = (target) => {
  * @param {String} target 日期
  * @return {Boolean} 验证结果
  */
-export const isDate = (target) => {
+export function isDate(target) {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Date'
 };
 /**
@@ -115,7 +115,7 @@ export const isDate = (target) => {
  * @param {String} target 正则
  * @return {Boolean} 验证结果
  */
-export const isRegExp = (target) => {
+export function isRegExp(target) {
     return Object.prototype.toString.call(target).slice(8, -1) === 'RegExp'
 };
 /**
@@ -123,7 +123,7 @@ export const isRegExp = (target) => {
  * @param {String} target 错误
  * @return {Boolean} 验证结果
  */
-export const isError = (target) => {
+export function isError(target) {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Error'
 };
 /**
@@ -131,7 +131,7 @@ export const isError = (target) => {
  * @param {String} target 唯一
  * @return {Boolean} 验证结果
  */
-export const isSymbol = (target) => {
+export function isSymbol(target) {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Symbol'
 };
 /**
@@ -139,7 +139,7 @@ export const isSymbol = (target) => {
  * @param {String} target Promise
  * @return {Boolean} 验证结果
  */
-export const isPromise = (target) => {
+export function isPromise(target) {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Promise'
 };
 export const UA = navigator.userAgent.toLowerCase();
@@ -147,35 +147,35 @@ export const UA = navigator.userAgent.toLowerCase();
  * 微信
  * @return {Boolean} 验证结果
  */
-export const isWeiXin = () => {
+export function isWeiXin() {
     return UA.match(/microMessenger/i) == 'micromessenger'
 };
 /**
  * 移动设备
  * @return {Boolean} 验证结果
  */
-export const isDeviceMobile = () => {
+export function isDeviceMobile() {
     return /android|webos|iphone|ipod|balckberry/i.test(UA)
 };
 /**
  * QQ浏览器
  * @return {Boolean} 验证结果
  */
-export const isQQBrowser = () => {
+export function isQQBrowser() {
     return !!UA.match(/mqqbrowser|qzone|qqbrowser|qbwebviewtype/i)
 };
 /**
  * 爬虫
  * @return {Boolean} 验证结果
  */
-export const isSpider = () => {
+export function isSpider() {
     return /adsbot|googlebot|bingbot|msnbot|yandexbot|baidubot|robot|careerbot|seznambot|bot|baiduspider|jikespider|symantecspider|scannerlwebcrawler|crawler|360spider|sosospider|sogou web sprider|sogou orion spider/.test(UA)
 };
 /**
  * IOS
  * @return {Boolean} 验证结果
  */
-export const isIos = () => {
+export function isIos() {
     let u = navigator.userAgent;
     if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) { // 安卓手机
         return false
@@ -193,7 +193,7 @@ export const isIos = () => {
  * PC
  * @return {Boolean} 验证结果
  */
-export const isPC = () => {
+export function isPC() {
     let userAgentInfo = navigator.userAgent;
     let Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
     let flag = true;
@@ -212,7 +212,7 @@ export const isPC = () => {
  * @param {String} type 验证类型
  * @return {Boolean} 验证结果
  */
-export const checkStr = (str, type = 'phone') => {
+export function checkStr(str, type = 'phone') {
     switch (type) {
         case 'phone': // 手机号码
             return /^1[3|4|5|6|7|8|9][0-9]{9}$/.test(str);
@@ -258,7 +258,7 @@ export const checkStr = (str, type = 'phone') => {
  * @param {String} cId 身份证号
  * @return {Boolean} 是否为身份证号
  */
-export const isCardID = (cId) => {
+export function isCardID(cId) {
     if (!/(^\d{15}$)|(^\d{17}(\d|X|x)$)/.test(cId)) {
         console.warn('你输入的身份证长度或格式错误')
         return false
