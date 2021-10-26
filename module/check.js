@@ -1,79 +1,180 @@
 /*
  * @Author       : Humility
  * @Date         : 2021-10-24 19:00:10
- * @LastEditTime : 2021-10-24 20:30:01
+ * @LastEditTime : 2021-10-26 20:59:26
  * @LastEditors  : Humility
  * @FilePath     : \humble-utils\module\check.js
  * @Description  : check tools
  */
-
-/** 正则 */
+/**
+ * 验证-邮箱
+ * @param {String} str 邮箱
+ * @return {Boolean} 验证结果
+ */
 export const isEmail = (str) => {
     return /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((.[a-zA-Z0-9_-]{2,3}){1,2})$/.test(str)
 };
+/**
+ * 验证-电话
+ * @param {String} str 电话
+ * @return {Boolean} 验证结果
+ */
 export const isMobile = (str) => {
     return /^1[0-9]{10}$/.test(str)
 };
+/**
+ * 验证-手机号
+ * @param {String} str 手机号
+ * @return {Boolean} 验证结果
+ */
 export const isPhone = (str) => {
     return /^([0-9]{3,4}-)?[0-9]{7,8}$/.test(str)
 };
+/**
+ * 验证-链接地址
+ * @param {String} str 链接地址
+ * @return {Boolean} 验证结果
+ */
 export const isURL = (str) => {
     return /^http[str]?:\/\/.*/.test(str)
 };
-/** 数据类型 */
+/**
+ * 验证-字符串
+ * @param {String} target 字符串
+ * @return {Boolean} 验证结果
+ */
 export const isString = (target) => {
     return Object.prototype.toString.call(target).slice(8, -1) === 'String'
 };
+/**
+ * 验证-数值
+ * @param {String} target 数值
+ * @return {Boolean} 验证结果
+ */
 export const isNumber = (target) => {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Number'
 };
+/**
+ * 验证-布尔型
+ * @param {String} target 布尔型
+ * @return {Boolean} 验证结果
+ */
 export const isBoolean = (target) => {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Boolean'
 };
+/**
+ * 验证-方法
+ * @param {String} target 方法
+ * @return {Boolean} 验证结果
+ */
 export const isFunction = (target) => {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Function'
 };
+/**
+ * 验证-空
+ * @param {String} target 空
+ * @return {Boolean} 验证结果
+ */
 export const isNull = (target) => {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Null'
 };
+/**
+ * 验证-未定义
+ * @param {String} target 未定义
+ * @return {Boolean} 验证结果
+ */
 export const isUndefined = (target) => {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Undefined'
 };
+/**
+ * 验证-对象
+ * @param {String} target 对象
+ * @return {Boolean} 验证结果
+ */
 export const isObject = (target) => {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Object'
 };
+/**
+ * 验证-数组
+ * @param {String} target 数组
+ * @return {Boolean} 验证结果
+ */
 export const isArray = (target) => {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Array'
 };
+/**
+ * 验证-日期
+ * @param {String} target 日期
+ * @return {Boolean} 验证结果
+ */
 export const isDate = (target) => {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Date'
 };
+/**
+ * 验证-正则
+ * @param {String} target 正则
+ * @return {Boolean} 验证结果
+ */
 export const isRegExp = (target) => {
     return Object.prototype.toString.call(target).slice(8, -1) === 'RegExp'
 };
+/**
+ * 验证-错误
+ * @param {String} target 错误
+ * @return {Boolean} 验证结果
+ */
 export const isError = (target) => {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Error'
 };
+/**
+ * 验证-唯一
+ * @param {String} target 唯一
+ * @return {Boolean} 验证结果
+ */
 export const isSymbol = (target) => {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Symbol'
 };
+/**
+ * 验证-Promise
+ * @param {String} target Promise
+ * @return {Boolean} 验证结果
+ */
 export const isPromise = (target) => {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Promise'
 };
-/** 客户端 */
 export const UA = navigator.userAgent.toLowerCase();
+/**
+ * 微信
+ * @return {Boolean} 验证结果
+ */
 export const isWeiXin = () => {
     return UA.match(/microMessenger/i) == 'micromessenger'
 };
+/**
+ * 移动设备
+ * @return {Boolean} 验证结果
+ */
 export const isDeviceMobile = () => {
     return /android|webos|iphone|ipod|balckberry/i.test(UA)
 };
+/**
+ * QQ浏览器
+ * @return {Boolean} 验证结果
+ */
 export const isQQBrowser = () => {
     return !!UA.match(/mqqbrowser|qzone|qqbrowser|qbwebviewtype/i)
 };
+/**
+ * 爬虫
+ * @return {Boolean} 验证结果
+ */
 export const isSpider = () => {
     return /adsbot|googlebot|bingbot|msnbot|yandexbot|baidubot|robot|careerbot|seznambot|bot|baiduspider|jikespider|symantecspider|scannerlwebcrawler|crawler|360spider|sosospider|sogou web sprider|sogou orion spider/.test(UA)
 };
+/**
+ * IOS
+ * @return {Boolean} 验证结果
+ */
 export const isIos = () => {
     let u = navigator.userAgent;
     if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) { // 安卓手机
@@ -88,6 +189,10 @@ export const isIos = () => {
         return false
     }
 };
+/**
+ * PC
+ * @return {Boolean} 验证结果
+ */
 export const isPC = () => {
     let userAgentInfo = navigator.userAgent;
     let Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
@@ -100,7 +205,13 @@ export const isPC = () => {
     }
     return flag;
 };
-/** 综合  */
+/**
+ * 综合验证
+ * @description: phone:手机号码 tel:座机 ...
+ * @param {String} str 要验证的字符串
+ * @param {String} type 验证类型
+ * @return {Boolean} 验证结果
+ */
 export const checkStr = (str, type = 'phone') => {
     switch (type) {
         case 'phone': // 手机号码
@@ -141,7 +252,12 @@ export const checkStr = (str, type = 'phone') => {
             return true;
     }
 };
-/** 严格身份证验证 */
+/**
+ * 严格身份证验证
+ * @description: 仅中国大陆身份证号有效
+ * @param {String} cId 身份证号
+ * @return {Boolean} 是否为身份证号
+ */
 export const isCardID = (cId) => {
     if (!/(^\d{15}$)|(^\d{17}(\d|X|x)$)/.test(cId)) {
         console.warn('你输入的身份证长度或格式错误')
