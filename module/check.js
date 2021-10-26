@@ -39,7 +39,7 @@ export const isNull = (target) => {
 export const isUndefined = (target) => {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Undefined'
 };
-export const isObj = (target) => {
+export const isObject = (target) => {
     return Object.prototype.toString.call(target).slice(8, -1) === 'Object'
 };
 export const isArray = (target) => {
