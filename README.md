@@ -1,7 +1,7 @@
 <!--
  * @Author       : Humility
  * @Date         : 2021-10-25 08:40:28
- * @LastEditTime : 2021-10-26 14:24:08
+ * @LastEditTime : 2021-10-26 19:02:16
  * @LastEditors  : Humility
  * @FilePath     : \humble-utils\README.md
  * @Description  : README
@@ -43,7 +43,7 @@ fmt = dateFormat(new Date(),"MM-dd"); // "07-22"
 
 - Common application program interface.
 - You can find for more details, API, and other docs on
-[documentation](http://hu.newzoo.xyz/) website.
+[documentation](https://forhumility.github.io/humble-utils/) website.
 
 ### Array
 
@@ -67,7 +67,7 @@ fmt = dateFormat(new Date(),"MM-dd"); // "07-22"
 
 ## License
 
-> humble-utils is licensed under a [MIT](https://opensource.org/licenses/MIT/) License.
+> humble-utils is licensed under a [MIT](https://github.com/forhumility/humble-utils/blob/main/LICENSE) License.
 
 ## Keywords
 
