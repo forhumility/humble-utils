@@ -1,9 +1,9 @@
 <!--
  * @Author       : Humility
  * @Date         : 2021-10-25 08:40:28
- * @LastEditTime : 2021-10-25 22:04:05
+ * @LastEditTime : 2021-10-26 19:02:52
  * @LastEditors  : Humility
- * @FilePath     : \humble-utils\docs\README.md
+ * @FilePath     : \humble-utils\docs\en-us\README.md
  * @Description  : README
 -->
 
@@ -49,4 +49,4 @@ Common application program interface
 
 ## License
 
-> humble-utils is licensed under a [MIT](https://opensource.org/licenses/MIT/) License.
+> humble-utils is licensed under a [MIT](https://github.com/forhumility/humble-utils/blob/main/LICENSE) License.
