@@ -1,16 +1,16 @@
 /*
  * @Author       : Humility
  * @Date         : 2021-10-23 23:10:06
- * @LastEditTime : 2021-10-24 22:07:46
+ * @LastEditTime : 2021-10-26 20:10:06
  * @LastEditors  : Humility
  * @FilePath     : \humble-utils\module\date.js
  * @Description  : date tools
  */
 /**
- * @description: 将Date转换为指定格式
+ * 将Date转换为指定格式
  * @param {Date} date 时间
- * @param {string} format 格式
- * @return {string} 指定格式的时间
+ * @param {String} format 格式
+ * @return {String} 指定格式的时间
  */
 export const dateFormat = (date, format = "yyyy-MM-dd hh:mm:ss") => {
     // 格式配置项
@@ -33,7 +33,16 @@ export const dateFormat = (date, format = "yyyy-MM-dd hh:mm:ss") => {
     };
     return format;
 };
-// 查找日期位于一年中的第几天
+/**
+ * 日期位于一年中的第几天
+ * @param {Date} date 日期
+ * @return {Number} 在一年中的第几天
+ */
 export const dateOfYear = (date) => Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
-// 两个日期间相差多少天
+/**
+ * 两个日期间相差多少天
+ * @param {Date} date1 日期1
+ * @param {Date} date2 日期2
+ * @return {Number} 相差天数
+ */
 export const dateDiffer = (date1, date2) => Math.ceil(Math.abs(date1.getTime() - date2.getTime()) / 86400000);

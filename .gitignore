@@ -10,6 +10,9 @@ node_modules
 yarn.lock
 package-lock.json
 
+# docs
+docs2md.md
+
 # jest
 coverage
 
