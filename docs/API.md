@@ -1,7 +1,7 @@
 <!--
  * @Author       : Humility
  * @Date         : 2021-10-25 21:00:42
- * @LastEditTime : 2021-10-25 22:05:24
+ * @LastEditTime : 2021-10-26 13:56:59
  * @LastEditors  : Humility
  * @FilePath     : \humble-utils\docs\API.md
  * @Description  : api
@@ -9,32 +9,96 @@
 
 #
 
-## Array
+## 数组
 
-### a1
+### shuffle
 
-### a2
+### contains
 
-## Check
+### sort
 
-### c1
+### unique
 
-### c2
+### union
 
-## Date
+### intersect
 
-### d1
+### removeOne
 
-### d2
+### removeAll
 
-## Object
+## 验证
 
-### o1
+### isEmail
 
-### o2
+### isMobile
 
-## String
+### isPhone
 
-### s1
+### isURL
 
-### s2
+### isString
+
+### isNumber
+
+### isBoolean
+
+### isNull
+
+### isUndefined
+
+### isObject
+
+### isArray
+
+### isDate
+
+### isRegExp
+
+### isError
+
+### isSymbol
+
+### isPromise
+
+### isWeiXin
+
+### isDeviceMobile
+
+### isQQBrowser
+
+### isIos
+
+### isPC
+
+### isSpider
+
+### checkStr
+
+### isCardID
+
+## 日期
+
+### dateFormat
+
+### dateOfYear
+
+### dateDiffer
+
+## 对象
+
+### isObjectEqual
+
+## 字符串
+
+### checkPwd
+
+### trim
+
+### changeCase
+
+### insertStr
+
+### hexToRGB
+
+### rgbToHex
