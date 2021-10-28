@@ -5,11 +5,11 @@
 .idea
 .vscode
 
-# docs
+# 文档
 docs
 docs2md.md
 
-# src
+# 源码
 /src
 
 # npm

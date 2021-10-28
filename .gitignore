@@ -10,10 +10,10 @@ node_modules
 yarn.lock
 package-lock.json
 
-# docs
+# 接口文档
 docs2md.md
 
-# build
+# 编译好的代码
 /dist
 
 # jest
