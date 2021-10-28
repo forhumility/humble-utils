@@ -13,6 +13,9 @@ package-lock.json
 # docs
 docs2md.md
 
+# build
+/dist
+
 # jest
 coverage
 
