@@ -1,7 +1,7 @@
 <!--
  * @Author       : Humility
  * @Date         : 2021-10-25 21:00:42
- * @LastEditTime : 2021-10-28 20:16:27
+ * @LastEditTime : 2021-10-28 20:55:17
  * @LastEditors  : Humility
  * @FilePath     : \humble-utils\docs\API.md
  * @Description  : api
@@ -14,6 +14,7 @@
 <a name="shuffle"></a>
 
 ### shuffle(arr) ⇒ <code>Array</code>
+
 洗牌算法
 
 **Kind**: global function
@@ -28,6 +29,7 @@
 <a name="contains"></a>
 
 ### contains(arr, val) ⇒ <code>Boolean</code>
+
 判断数组中是否存在某个值
 
 **Kind**: global function
@@ -41,6 +43,7 @@
 <a name="sort"></a>
 
 ### sort(arr, type) ⇒ <code>Array</code>
+
 数组排序
 
 **Kind**: global function
@@ -58,6 +61,7 @@
 <a name="unique"></a>
 
 ### unique(arr) ⇒ <code>Array</code>
+
 数组去重
 
 **Kind**: global function
@@ -72,6 +76,7 @@
 <a name="union"></a>
 
 ### union(arr1, arr2) ⇒ <code>Array</code>
+
 两个数组的并集
 
 **Kind**: global function
@@ -87,6 +92,7 @@
 <a name="intersect"></a>
 
 ### intersect(arr1, arr2) ⇒ <code>Array</code>
+
 两个数组的交集
 
 **Kind**: global function
@@ -102,6 +108,7 @@
 <a name="removeOne"></a>
 
 ### removeOne(arr, ele) ⇒ <code>Array</code>
+
 数组中删除第一个元素
 
 **Kind**: global function
@@ -117,6 +124,7 @@
 <a name="removeAll"></a>
 
 ### removeAll(arr, ele) ⇒ <code>Array</code>
+
 数组中删除某个元素
 
 **Kind**: global function
@@ -134,6 +142,7 @@
 <a name="isWeiXin"></a>
 
 ### isWeiXin ⇒ <code>Boolean</code>
+
 微信
 
 **Kind**: global constant
@@ -143,6 +152,7 @@
 <a name="isDeviceMobile"></a>
 
 ### isDeviceMobile ⇒ <code>Boolean</code>
+
 移动设备
 
 **Kind**: global constant
@@ -152,6 +162,7 @@
 <a name="isQQBrowser"></a>
 
 ### isQQBrowser ⇒ <code>Boolean</code>
+
 QQ浏览器
 
 **Kind**: global constant
@@ -161,6 +172,7 @@ QQ浏览器
 <a name="isSpider"></a>
 
 ### isSpider ⇒ <code>Boolean</code>
+
 爬虫
 
 **Kind**: global constant
@@ -170,6 +182,7 @@ QQ浏览器
 <a name="isIos"></a>
 
 ### isIos ⇒ <code>Boolean</code>
+
 IOS
 
 **Kind**: global constant
@@ -179,6 +192,7 @@ IOS
 <a name="isPC"></a>
 
 ### isPC ⇒ <code>Boolean</code>
+
 PC
 
 **Kind**: global constant
@@ -189,6 +203,7 @@ PC
 <a name="isEmail"></a>
 
 ### isEmail(str) ⇒ <code>Boolean</code>
+
 验证-邮箱
 
 **Kind**: global function
@@ -203,6 +218,7 @@ PC
 <a name="isMobile"></a>
 
 ### isMobile(str) ⇒ <code>Boolean</code>
+
 验证-电话
 
 **Kind**: global function
@@ -217,6 +233,7 @@ PC
 <a name="isPhone"></a>
 
 ### isPhone(str) ⇒ <code>Boolean</code>
+
 验证-手机号
 
 **Kind**: global function
@@ -231,6 +248,7 @@ PC
 <a name="isURL"></a>
 
 ### isURL(str) ⇒ <code>Boolean</code>
+
 验证-链接地址
 
 **Kind**: global function
@@ -245,6 +263,7 @@ PC
 <a name="isString"></a>
 
 ### isString(target) ⇒ <code>Boolean</code>
+
 验证-字符串
 
 **Kind**: global function
@@ -259,6 +278,7 @@ PC
 <a name="isNumber"></a>
 
 ### isNumber(target) ⇒ <code>Boolean</code>
+
 验证-数值
 
 **Kind**: global function
@@ -273,6 +293,7 @@ PC
 <a name="isBoolean"></a>
 
 ### isBoolean(target) ⇒ <code>Boolean</code>
+
 验证-布尔型
 
 **Kind**: global function
@@ -287,6 +308,7 @@ PC
 <a name="isFunction"></a>
 
 ### isFunction(target) ⇒ <code>Boolean</code>
+
 验证-方法
 
 **Kind**: global function
@@ -301,6 +323,7 @@ PC
 <a name="isNull"></a>
 
 ### isNull(target) ⇒ <code>Boolean</code>
+
 验证-空
 
 **Kind**: global function
@@ -315,6 +338,7 @@ PC
 <a name="isUndefined"></a>
 
 ### isUndefined(target) ⇒ <code>Boolean</code>
+
 验证-未定义
 
 **Kind**: global function
@@ -329,6 +353,7 @@ PC
 <a name="isObject"></a>
 
 ### isObject(target) ⇒ <code>Boolean</code>
+
 验证-对象
 
 **Kind**: global function
@@ -343,6 +368,7 @@ PC
 <a name="isArray"></a>
 
 ### isArray(target) ⇒ <code>Boolean</code>
+
 验证-数组
 
 **Kind**: global function
@@ -357,6 +383,7 @@ PC
 <a name="isDate"></a>
 
 ### isDate(target) ⇒ <code>Boolean</code>
+
 验证-日期
 
 **Kind**: global function
@@ -371,6 +398,7 @@ PC
 <a name="isRegExp"></a>
 
 ### isRegExp(target) ⇒ <code>Boolean</code>
+
 验证-正则
 
 **Kind**: global function
@@ -385,6 +413,7 @@ PC
 <a name="isError"></a>
 
 ### isError(target) ⇒ <code>Boolean</code>
+
 验证-错误
 
 **Kind**: global function
@@ -399,6 +428,7 @@ PC
 <a name="isSymbol"></a>
 
 ### isSymbol(target) ⇒ <code>Boolean</code>
+
 验证-唯一
 
 **Kind**: global function
@@ -413,6 +443,7 @@ PC
 <a name="isPromise"></a>
 
 ### isPromise(target) ⇒ <code>Boolean</code>
+
 验证-Promise
 
 **Kind**: global function
@@ -427,6 +458,7 @@ PC
 <a name="checkStr"></a>
 
 ### checkStr(str, type) ⇒ <code>Boolean</code>
+
 综合验证
 
 **Kind**: global function
@@ -444,6 +476,7 @@ PC
 <a name="isCardID"></a>
 
 ### isCardID(cId) ⇒ <code>Boolean</code>
+
 严格身份证验证
 
 **Kind**: global function
@@ -462,12 +495,14 @@ PC
 <a name="dateFormat"></a>
 
 ### dateFormat(date, format) ⇒ <code>String</code>
-年-yyyy 月-MM 日-dd
+
+将Date转换为指定格式
 
 **Kind**: global function
 
 **Returns**: <code>String</code> - 指定格式的时间
 
+**Description:**: 年-yyyy 月-MM 日-dd 时-hh 分-mm 秒-ss 毫秒-SSS
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -477,6 +512,7 @@ PC
 <a name="dateOfYear"></a>
 
 ### dateOfYear(date) ⇒ <code>Number</code>
+
 日期位于一年中的第几天
 
 **Kind**: global function
@@ -491,6 +527,7 @@ PC
 <a name="dateDiffer"></a>
 
 ### dateDiffer(date1, date2) ⇒ <code>Number</code>
+
 两个日期间相差多少天
 
 **Kind**: global function
@@ -508,6 +545,7 @@ PC
 <a name="isObjectEqual"></a>
 
 ### isObjectEqual(obj1, obj2) ⇒ <code>Boolean</code>
+
 判断两个对象是否键值相同
 
 **Kind**: global function
@@ -527,6 +565,7 @@ PC
 <a name="checkPwd"></a>
 
 ### checkPwd(pwd) ⇒ <code>Number</code>
+
 密码强度监测
 
 **Kind**: global function
@@ -543,6 +582,7 @@ PC
 <a name="trim"></a>
 
 ### trim(str, type) ⇒ <code>String</code>
+
 字符串去空格
 
 **Kind**: global function
@@ -560,6 +600,7 @@ PC
 <a name="changeCase"></a>
 
 ### changeCase(str, type) ⇒ <code>String</code>
+
 字符(英文)转换
 
 **Kind**: global function
@@ -575,6 +616,7 @@ PC
 <a name="insertStr"></a>
 
 ### insertStr(soure, index, newStr) ⇒ <code>String</code>
+
 在字符串中插入新字符串
 
 **Kind**: global function
@@ -591,6 +633,7 @@ PC
 <a name="hexToRGB"></a>
 
 ### hexToRGB(val, opa) ⇒ <code>String</code>
+
 16进制颜色转RGB/RGBA字符串
 
 **Kind**: global function
@@ -606,6 +649,7 @@ PC
 <a name="rgbToHex"></a>
 
 ### rgbToHex(r, g, b) ⇒ <code>String</code>
+
 RGB/RGBA字符串转16进制颜色
 
 **Kind**: global function
