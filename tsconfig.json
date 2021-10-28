@@ -3,11 +3,14 @@
     "target": "es6", // 指定ECMAScript目标版本
     "module": "esnext", // 指定模块化类型
     "declaration": true, // 生成 `.d.ts` 文件
+    "allowJs": false, // 允许编译js
     "outDir": "./dist", // 编译后生成的文件目录
     "strict": true // 开启严格的类型检测
   },
   "exclude": [
     "node_modules",
+    "public",
+    "js",
     "docs",
     "test"
   ] // 不需要编译目录
