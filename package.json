@@ -6,8 +6,8 @@
     "types": "/dist/index.d.ts",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "docs": "jsdoc2md src/*.ts > docs2md.md",
-        "build": "tsc"
+        "build": "tsc",
+        "docs": "jsdoc2md dist/src/*.js > docs2md.md"
     },
     "keywords": [
         "humility",
