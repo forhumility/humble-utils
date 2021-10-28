@@ -1,7 +1,7 @@
 /**
  * @Author       : Humility
  * @Date         : 2021-10-23 23:10:06
- * @LastEditTime : 2021-10-28 19:27:56
+ * @LastEditTime : 2021-10-28 20:48:52
  * @LastEditors  : Humility
  * @FilePath     : \humble-utils\src\date.ts
  * @Description  : 日期
@@ -13,7 +13,7 @@
  * @param {Date} date 时间
  * @param {String} format 格式
  * @return {String} 指定格式的时间
- * @description 年-yyyy 月-MM 日-dd
+ * @description: 年-yyyy 月-MM 日-dd 时-hh 分-mm 秒-ss 毫秒-SSS
  */
  export function dateFormat(date: Date, format = "yyyy-MM-dd hh:mm:ss") {
     // 格式配置项
