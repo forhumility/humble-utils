@@ -6,7 +6,7 @@
     "types": "/dist/index.d.ts",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "docs": "jsdoc2md module/*.js > docs2md.md",
+        "docs": "jsdoc2md src/*.ts > docs2md.md",
         "build": "tsc"
     },
     "keywords": [
