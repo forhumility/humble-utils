@@ -9,6 +9,9 @@
 docs
 docs2md.md
 
+# src
+/src
+
 # npm
 node_modules
 yarn.lock
