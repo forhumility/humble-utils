@@ -494,8 +494,7 @@ PC
 
 <a name="dateFormat"></a>
 
-### dateFormat(date, format) ⇒ <code>String</code>
-
+## dateFormat(date, format) ⇒ <code>String</code>
 将Date转换为指定格式
 
 **Kind**: global function
@@ -504,15 +503,15 @@ PC
 
 **Description:**: 年-yyyy 月-MM 日-dd 时-hh 分-mm 秒-ss 毫秒-SSS
 
+
 | Param | Type | Description |
 | --- | --- | --- |
-| date | <code>Date</code> | 时间 |
+| date | <code>Date</code> \| <code>string</code> \| <code>number</code> | 时间 |
 | format | <code>String</code> | 格式 |
 
 <a name="dateOfYear"></a>
 
-### dateOfYear(date) ⇒ <code>Number</code>
-
+## dateOfYear(date) ⇒ <code>Number</code>
 日期位于一年中的第几天
 
 **Kind**: global function
@@ -522,7 +521,7 @@ PC
 
 | Param | Type | Description |
 | --- | --- | --- |
-| date | <code>Date</code> | 日期 |
+| date | <code>Date</code> \| <code>string</code> \| <code>number</code> | 日期 |
 
 <a name="dateDiffer"></a>
 
