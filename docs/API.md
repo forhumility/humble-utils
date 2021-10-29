@@ -494,7 +494,7 @@ PC
 
 <a name="dateFormat"></a>
 
-## dateFormat(date, format) ⇒ <code>String</code>
+### dateFormat(date, format) ⇒ <code>String</code>
 将Date转换为指定格式
 
 **Kind**: global function
@@ -511,7 +511,7 @@ PC
 
 <a name="dateOfYear"></a>
 
-## dateOfYear(date) ⇒ <code>Number</code>
+### dateOfYear(date) ⇒ <code>Number</code>
 日期位于一年中的第几天
 
 **Kind**: global function
