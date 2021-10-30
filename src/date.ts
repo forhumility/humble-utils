@@ -1,13 +1,14 @@
 /**
  * @Author       : Humility
  * @Date         : 2021-10-23 23:10:06
- * @LastEditTime : 2021-10-30 16:29:12
+ * @LastEditTime : 2021-10-30 16:52:42
  * @LastEditors  : Humility
  * @FilePath     : \humble-utils\src\date.ts
  * @Description  : 日期
  */
 
 
+import { isDate } from './check'
 /**
  * 将Date转换为指定格式
  * @param {Date} date 时间
@@ -64,10 +65,12 @@ export function dateFormat(date: Date, format = "yyyy-MM-dd hh:mm:ss", language 
 };
 /**
  * 日期位于一年中的第几天
- * @param {Date} date 日期
+ * @param {Date | string | number} date 日期
  * @return {Number} 在一年中的第几天
  */
 export function dateOfYear(date: Date) {
+    let isDateType: boolean = isDate(date);
+    date = isDateType ? date : new Date(date);
     return Math.ceil((Date.parse(date.toString()) - Date.parse(new Date(date.getFullYear(), 0, 0).toString())) / 1000 / 60 / 60 / 24);
 };
 /**
