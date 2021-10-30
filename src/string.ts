@@ -1,38 +1,13 @@
 /**
  * @Author       : Humility
  * @Date         : 2021-10-24 21:37:35
- * @LastEditTime : 2021-10-28 19:28:03
+ * @LastEditTime : 2021-10-30 15:32:41
  * @LastEditors  : Humility
  * @FilePath     : \humble-utils\src\string.ts
  * @Description  : 字符串
  */
 
 
-/**
- * 密码强度监测
- * @description: 强度 0、1、2、3、4
- * @param {String} pwd 密码
- * @return {Number} 密码强度
- */
- export function checkPwd(pwd:string) {
-    let Lv = 0;
-    if (pwd.length < 6) {
-        return Lv
-    }
-    if (/[0-9]/.test(pwd)) {
-        Lv++
-    }
-    if (/[a-z]/.test(pwd)) {
-        Lv++
-    }
-    if (/[A-Z]/.test(pwd)) {
-        Lv++
-    }
-    if (/[\.|-|_]/.test(pwd)) {
-        Lv++
-    }
-    return Lv;
-};
 /**
  * 字符串去空格
  * @description: 去空格类型 1:所有空格 2:前后空格 3:前空格 4:后空格

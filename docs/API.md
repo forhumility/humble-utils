@@ -1,7 +1,7 @@
 <!--
  * @Author       : Humility
  * @Date         : 2021-10-25 21:00:42
- * @LastEditTime : 2021-10-28 20:55:17
+ * @LastEditTime : 2021-10-30 16:54:20
  * @LastEditors  : Humility
  * @FilePath     : \humble-utils\docs\API.md
  * @Description  : api
@@ -13,13 +13,13 @@
 
 <a name="shuffle"></a>
 
-### shuffle(arr) ⇒ <code>Array</code>
+### shuffle(arr) ⇒ <code>Array.&lt;any&gt;
 
-洗牌算法
+洗牌算法-把数组打乱顺序
 
 **Kind**: global function
 
-**Returns**: <code>Array</code> - 打乱后的数组
+**Returns**: <code>Array.&lt;any&gt;</code> - 打乱后的数组
 
 
 | Param | Type | Description |
@@ -28,7 +28,7 @@
 
 <a name="contains"></a>
 
-### contains(arr, val) ⇒ <code>Boolean</code>
+### contains(arr, val) ⇒ <code>Boolean
 
 判断数组中是否存在某个值
 
@@ -37,174 +37,113 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| arr | <code>Array</code> | 目标数组 |
-| val | <code>\*</code> | 需要判断的值 |
+| arr | <code>Array.&lt;(string\|number\|null)&gt;</code> | 目标数组 |
+| val | <code>string</code> \| <code>number</code> \| <code>null</code> | 需要判断的值 |
 
 <a name="sort"></a>
 
-### sort(arr, type) ⇒ <code>Array</code>
+### sort(arr, type) ⇒ <code>Array.&lt;any&gt;
 
 数组排序
 
 **Kind**: global function
 
-**Returns**: <code>Array</code> - 排序后的数组
+**Returns**: <code>Array.&lt;any&gt;</code> - 排序后的数组
 
 **Description:**: 排序类型 1:降序 2:升序 3:随机
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| arr | <code>Array</code> | 需要排序的数组 |
+| arr | <code>Array.&lt;(string\|number\|null)&gt;</code> | 需要排序的数组 |
 | type | <code>Number</code> | 排序类型 |
 
 <a name="unique"></a>
 
-### unique(arr) ⇒ <code>Array</code>
+### unique(arr) ⇒ <code>Array.&lt;any&gt;
 
 数组去重
 
 **Kind**: global function
 
-**Returns**: <code>Array</code> - 去除后的数组
+**Returns**: <code>Array.&lt;any&gt;</code> - 去除后的数组
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| arr | <code>Array</code> | 目标数组 |
+| arr | <code>Array.&lt;(string\|number\|null)&gt;</code> | 目标数组 |
 
 <a name="union"></a>
 
-### union(arr1, arr2) ⇒ <code>Array</code>
+### union(arr1, arr2) ⇒ <code>Array.&lt;any&gt;
 
 两个数组的并集
 
 **Kind**: global function
 
-**Returns**: <code>Array</code> - 数组的并集
+**Returns**: <code>Array.&lt;any&gt;</code> - 数组的并集
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| arr1 | <code>Array</code> | 第一个数组 |
-| arr2 | <code>Array</code> | 第二个数组 |
+| arr1 | <code>Array.&lt;any&gt;</code> | 第一个数组 |
+| arr2 | <code>Array.&lt;any&gt;</code> | 第二个数组 |
 
 <a name="intersect"></a>
 
-### intersect(arr1, arr2) ⇒ <code>Array</code>
+### intersect(arr1, arr2) ⇒ <code>Array.&lt;any&gt;
 
 两个数组的交集
 
 **Kind**: global function
 
-**Returns**: <code>Array</code> - 数组的交集
+**Returns**: <code>Array.&lt;any&gt;</code> - 数组的交集
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| arr1 | <code>Array</code> | 第一个数组 |
-| arr2 | <code>Array</code> | 第二个数组 |
+| arr1 | <code>Array.&lt;any&gt;</code> | 第一个数组 |
+| arr2 | <code>Array.&lt;any&gt;</code> | 第二个数组 |
 
 <a name="removeOne"></a>
 
-### removeOne(arr, ele) ⇒ <code>Array</code>
+### removeOne(arr, ele) ⇒ <code>Array.&lt;any&gt;
 
 数组中删除第一个元素
 
 **Kind**: global function
 
-**Returns**: <code>Array</code> - 删除该数组第一个元素后的数组
+**Returns**: <code>Array.&lt;any&gt;</code> - 删除该数组第一个元素后的数组
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| arr | <code>Array</code> | 目标数组 |
-| ele | <code>\*</code> | 需要删除的元素 |
+| arr | <code>Array.&lt;any&gt;</code> | 目标数组 |
+| ele | <code>any</code> | 需要删除的元素 |
 
 <a name="removeAll"></a>
 
-### removeAll(arr, ele) ⇒ <code>Array</code>
+### removeAll(arr, ele) ⇒ <code>Array.&lt;any&gt;
 
 数组中删除某个元素
 
 **Kind**: global function
 
-**Returns**: <code>Array</code> - 删除该数组该元素后的数组
+**Returns**: <code>Array.&lt;any&gt;</code> - 删除该数组该元素后的数组
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| arr | <code>Array</code> | 目标数组 |
-| ele | <code>\*</code> | 需要删除的元素 |
+| arr | <code>Array.&lt;any&gt;</code> | 目标数组 |
+| ele | <code>any</code> | 需要删除的元素 |
 
 ## 验证
 
-<a name="isWeiXin"></a>
-
-### isWeiXin ⇒ <code>Boolean</code>
-
-微信
-
-**Kind**: global constant
-
-**Returns**: <code>Boolean</code> - 验证结果
-
-<a name="isDeviceMobile"></a>
-
-### isDeviceMobile ⇒ <code>Boolean</code>
-
-移动设备
-
-**Kind**: global constant
-
-**Returns**: <code>Boolean</code> - 验证结果
-
-<a name="isQQBrowser"></a>
-
-### isQQBrowser ⇒ <code>Boolean</code>
-
-QQ浏览器
-
-**Kind**: global constant
-
-**Returns**: <code>Boolean</code> - 验证结果
-
-<a name="isSpider"></a>
-
-### isSpider ⇒ <code>Boolean</code>
-
-爬虫
-
-**Kind**: global constant
-
-**Returns**: <code>Boolean</code> - 验证结果
-
-<a name="isIos"></a>
-
-### isIos ⇒ <code>Boolean</code>
-
-IOS
-
-**Kind**: global constant
-
-**Returns**: <code>Boolean</code> - 验证结果
-
-<a name="isPC"></a>
-
-### isPC ⇒ <code>Boolean</code>
-
-PC
-
-**Kind**: global constant
-
-**Returns**: <code>Boolean</code> - 验证结果
-
-
 <a name="isEmail"></a>
 
-### isEmail(str) ⇒ <code>Boolean</code>
+### isEmail(str) ⇒ <code>Boolean
 
-验证-邮箱
+邮箱
 
 **Kind**: global function
 
@@ -217,9 +156,9 @@ PC
 
 <a name="isMobile"></a>
 
-### isMobile(str) ⇒ <code>Boolean</code>
+### isMobile(str) ⇒ <code>Boolean
 
-验证-电话
+电话
 
 **Kind**: global function
 
@@ -232,9 +171,9 @@ PC
 
 <a name="isPhone"></a>
 
-### isPhone(str) ⇒ <code>Boolean</code>
+### isPhone(str) ⇒ <code>Boolean
 
-验证-手机号
+手机号
 
 **Kind**: global function
 
@@ -247,9 +186,9 @@ PC
 
 <a name="isURL"></a>
 
-### isURL(str) ⇒ <code>Boolean</code>
+### isURL(str) ⇒ <code>Boolean
 
-验证-链接地址
+网址
 
 **Kind**: global function
 
@@ -258,13 +197,30 @@ PC
 
 | Param | Type | Description |
 | --- | --- | --- |
-| str | <code>String</code> | 链接地址 |
+| str | <code>String</code> | URL地址 |
+
+<a name="checkPwd"></a>
+
+### checkPwd(pwd) ⇒ <code>Number
+
+密码强度监测
+
+**Kind**: global function
+
+**Returns**: <code>Number</code> - 密码强度
+
+**Description:**: 强度 0、1、2、3、4
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| pwd | <code>String</code> | 密码 |
 
 <a name="isString"></a>
 
-### isString(target) ⇒ <code>Boolean</code>
+### isString(target) ⇒ <code>Boolean
 
-验证-字符串
+字符串
 
 **Kind**: global function
 
@@ -273,13 +229,13 @@ PC
 
 | Param | Type | Description |
 | --- | --- | --- |
-| target | <code>String</code> | 字符串 |
+| target | <code>String</code> | 要验证的对象 |
 
 <a name="isNumber"></a>
 
-### isNumber(target) ⇒ <code>Boolean</code>
+### isNumber(target) ⇒ <code>Boolean
 
-验证-数值
+数值
 
 **Kind**: global function
 
@@ -288,13 +244,13 @@ PC
 
 | Param | Type | Description |
 | --- | --- | --- |
-| target | <code>String</code> | 数值 |
+| target | <code>String</code> | 要验证的对象 |
 
 <a name="isBoolean"></a>
 
-### isBoolean(target) ⇒ <code>Boolean</code>
+### isBoolean(target) ⇒ <code>Boolean
 
-验证-布尔型
+布尔型
 
 **Kind**: global function
 
@@ -303,13 +259,13 @@ PC
 
 | Param | Type | Description |
 | --- | --- | --- |
-| target | <code>String</code> | 布尔型 |
+| target | <code>String</code> | 要验证的对象 |
 
 <a name="isFunction"></a>
 
-### isFunction(target) ⇒ <code>Boolean</code>
+### isFunction(target) ⇒ <code>Boolean
 
-验证-方法
+方法
 
 **Kind**: global function
 
@@ -318,13 +274,13 @@ PC
 
 | Param | Type | Description |
 | --- | --- | --- |
-| target | <code>String</code> | 方法 |
+| target | <code>String</code> | 要验证的对象 |
 
 <a name="isNull"></a>
 
-### isNull(target) ⇒ <code>Boolean</code>
+### isNull(target) ⇒ <code>Boolean
 
-验证-空
+空
 
 **Kind**: global function
 
@@ -333,13 +289,13 @@ PC
 
 | Param | Type | Description |
 | --- | --- | --- |
-| target | <code>String</code> | 空 |
+| target | <code>String</code> | 要验证的对象 |
 
 <a name="isUndefined"></a>
 
-### isUndefined(target) ⇒ <code>Boolean</code>
+### isUndefined(target) ⇒ <code>Boolean
 
-验证-未定义
+未定义
 
 **Kind**: global function
 
@@ -348,13 +304,13 @@ PC
 
 | Param | Type | Description |
 | --- | --- | --- |
-| target | <code>String</code> | 未定义 |
+| target | <code>String</code> | 要验证的对象 |
 
 <a name="isObject"></a>
 
-### isObject(target) ⇒ <code>Boolean</code>
+### isObject(target) ⇒ <code>Boolean
 
-验证-对象
+对象
 
 **Kind**: global function
 
@@ -363,13 +319,13 @@ PC
 
 | Param | Type | Description |
 | --- | --- | --- |
-| target | <code>String</code> | 对象 |
+| target | <code>String</code> | 要验证的对象 |
 
 <a name="isArray"></a>
 
-### isArray(target) ⇒ <code>Boolean</code>
+### isArray(target) ⇒ <code>Boolean
 
-验证-数组
+数组
 
 **Kind**: global function
 
@@ -378,13 +334,13 @@ PC
 
 | Param | Type | Description |
 | --- | --- | --- |
-| target | <code>String</code> | 数组 |
+| target | <code>String</code> | 要验证的对象 |
 
 <a name="isDate"></a>
 
-### isDate(target) ⇒ <code>Boolean</code>
+### isDate(target) ⇒ <code>Boolean
 
-验证-日期
+日期
 
 **Kind**: global function
 
@@ -393,13 +349,13 @@ PC
 
 | Param | Type | Description |
 | --- | --- | --- |
-| target | <code>String</code> | 日期 |
+| target | <code>String</code> | 要验证的对象 |
 
 <a name="isRegExp"></a>
 
-### isRegExp(target) ⇒ <code>Boolean</code>
+### isRegExp(target) ⇒ <code>Boolean
 
-验证-正则
+正则
 
 **Kind**: global function
 
@@ -408,13 +364,13 @@ PC
 
 | Param | Type | Description |
 | --- | --- | --- |
-| target | <code>String</code> | 正则 |
+| target | <code>String</code> | 要验证的对象 |
 
 <a name="isError"></a>
 
-### isError(target) ⇒ <code>Boolean</code>
+### isError(target) ⇒ <code>Boolean
 
-验证-错误
+错误
 
 **Kind**: global function
 
@@ -423,13 +379,13 @@ PC
 
 | Param | Type | Description |
 | --- | --- | --- |
-| target | <code>String</code> | 错误 |
+| target | <code>String</code> | 要验证的对象 |
 
 <a name="isSymbol"></a>
 
-### isSymbol(target) ⇒ <code>Boolean</code>
+### isSymbol(target) ⇒ <code>Boolean
 
-验证-唯一
+唯一
 
 **Kind**: global function
 
@@ -438,13 +394,13 @@ PC
 
 | Param | Type | Description |
 | --- | --- | --- |
-| target | <code>String</code> | 唯一 |
+| target | <code>String</code> | 要验证的对象 |
 
 <a name="isPromise"></a>
 
-### isPromise(target) ⇒ <code>Boolean</code>
+### isPromise(target) ⇒ <code>Boolean
 
-验证-Promise
+Promise
 
 **Kind**: global function
 
@@ -453,29 +409,29 @@ PC
 
 | Param | Type | Description |
 | --- | --- | --- |
-| target | <code>String</code> | Promise |
+| target | <code>String</code> | 要验证的对象 |
 
 <a name="checkStr"></a>
 
-### checkStr(str, type) ⇒ <code>Boolean</code>
+### checkStr(str, type) ⇒ <code>Boolean
 
-综合验证
+综合类验证
 
 **Kind**: global function
 
 **Returns**: <code>Boolean</code> - 验证结果
 
-**Description:**: phone:手机号码 tel:座机 ...
+**Description:**: phone-手机号码 tel-座机 card-身份证 pwd-密码以字母开头，长度在6~18之间，只能包含字母、数字和下划线 postal-邮编 QQ-QQ号 email-邮箱 maney-金额(小数点2位) URL-网址 IP-IP地址 date-日期 number-数字 english-英文 chinese-中文 lower-小写 upper-大写 HTML-html标签
 
 
 | Param | Type | Description |
 | --- | --- | --- |
 | str | <code>String</code> | 要验证的字符串 |
-| type | <code>String</code> | 验证类型 |
+| type | <code>String</code> | 验证类型 默认-phone |
 
 <a name="isCardID"></a>
 
-### isCardID(cId) ⇒ <code>Boolean</code>
+### isCardID(cId) ⇒ <code>Boolean
 
 严格身份证验证
 
@@ -490,28 +446,92 @@ PC
 | --- | --- | --- |
 | cId | <code>String</code> | 身份证号 |
 
+<a name="isWeiXin"></a>
+
+### isWeiXin() ⇒ <code>Boolean
+
+微信
+
+**Kind**: global function
+
+**Returns**: <code>Boolean</code> - 验证结果
+
+<a name="isDeviceMobile"></a>
+
+### isDeviceMobile() ⇒ <code>Boolean
+
+移动设备
+
+**Kind**: global function
+
+**Returns**: <code>Boolean</code> - 验证结果
+
+<a name="isQQBrowser"></a>
+
+### isQQBrowser() ⇒ <code>Boolean
+
+QQ浏览器
+
+**Kind**: global function
+
+**Returns**: <code>Boolean</code> - 验证结果
+
+<a name="isSpider"></a>
+
+### isSpider() ⇒ <code>Boolean
+
+爬虫
+
+**Kind**: global function
+
+**Returns**: <code>Boolean</code> - 验证结果
+
+<a name="isIos"></a>
+
+### isIos() ⇒ <code>Boolean
+
+IOS
+
+**Kind**: global function
+
+**Returns**: <code>Boolean</code> - 验证结果
+
+<a name="isPC"></a>
+
+### isPC() ⇒ <code>Boolean
+
+PC
+
+**Kind**: global function
+
+**Returns**: <code>Boolean</code> - 验证结果
+
 ## 日期
 
 <a name="dateFormat"></a>
 
-### dateFormat(date, format) ⇒ <code>String</code>
+### dateFormat(date, format, language) ⇒ <code>String
+
 将Date转换为指定格式
 
 **Kind**: global function
 
 **Returns**: <code>String</code> - 指定格式的时间
 
-**Description:**: 年-yyyy 月-MM 日-dd 时-hh 分-mm 秒-ss 毫秒-SSS
+**Description:**: 年-yyyy 季度-q 星期-EE 月-MM 日-dd 时-hh 分-mm 秒-ss 毫秒-SSS
+
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| date | <code>Date</code> \| <code>string</code> \| <code>number</code> | 时间 |
-| format | <code>String</code> | 格式 |
+| date | <code>Date</code> | 时间 |
+| format | <code>String</code> | 格式（默认：yyyy-MM-dd hh:mm:ss） |
+| language | <code>String</code> | 语言地及区编码（默认：本地语言） |
 
 <a name="dateOfYear"></a>
 
-### dateOfYear(date) ⇒ <code>Number</code>
+### dateOfYear(date) ⇒ <code>Number
+
 日期位于一年中的第几天
 
 **Kind**: global function
@@ -525,7 +545,7 @@ PC
 
 <a name="dateDiffer"></a>
 
-### dateDiffer(date1, date2) ⇒ <code>Number</code>
+### dateDiffer(date1, date2) ⇒ <code>Number
 
 两个日期间相差多少天
 
@@ -543,7 +563,7 @@ PC
 
 <a name="isObjectEqual"></a>
 
-### isObjectEqual(obj1, obj2) ⇒ <code>Boolean</code>
+### isObjectEqual(obj1, obj2) ⇒ <code>Boolean
 
 判断两个对象是否键值相同
 
@@ -561,26 +581,9 @@ PC
 
 ## 字符串
 
-<a name="checkPwd"></a>
-
-### checkPwd(pwd) ⇒ <code>Number</code>
-
-密码强度监测
-
-**Kind**: global function
-
-**Returns**: <code>Number</code> - 密码强度
-
-**Description:**: 强度 0、1、2、3、4
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| pwd | <code>String</code> | 密码 |
-
 <a name="trim"></a>
 
-### trim(str, type) ⇒ <code>String</code>
+### trim(str, type) ⇒ <code>String
 
 字符串去空格
 
@@ -598,7 +601,7 @@ PC
 
 <a name="changeCase"></a>
 
-### changeCase(str, type) ⇒ <code>String</code>
+### changeCase(str, type) ⇒ <code>String
 
 字符(英文)转换
 
@@ -614,7 +617,7 @@ PC
 
 <a name="insertStr"></a>
 
-### insertStr(soure, index, newStr) ⇒ <code>String</code>
+### insertStr(soure, index, newStr) ⇒ <code>String
 
 在字符串中插入新字符串
 
@@ -631,7 +634,7 @@ PC
 
 <a name="hexToRGB"></a>
 
-### hexToRGB(val, opa) ⇒ <code>String</code>
+### hexToRGB(val, opa) ⇒ <code>String
 
 16进制颜色转RGB/RGBA字符串
 
@@ -647,7 +650,7 @@ PC
 
 <a name="rgbToHex"></a>
 
-### rgbToHex(r, g, b) ⇒ <code>String</code>
+### rgbToHex(r, g, b) ⇒ <code>String
 
 RGB/RGBA字符串转16进制颜色
 

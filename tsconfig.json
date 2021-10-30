@@ -5,7 +5,8 @@
     "declaration": true, // 生成 `.d.ts` 文件
     "allowJs": false, // 允许编译js
     "outDir": "./dist", // 编译后生成的文件目录
-    "strict": true // 开启严格的类型检测
+    "strict": true, // 开启严格的类型检测
+    "suppressImplicitAnyIndexErrors":true,// 对象索引不警告
   },
   "exclude": [
     "node_modules",
