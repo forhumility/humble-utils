@@ -1,6 +1,6 @@
 {
     "name": "humble-utils",
-    "version": "0.4.1",
+    "version": "0.4.2",
     "description": "javascript utils",
     "main": "/dist/index.js",
     "types": "/dist/index.d.ts",
