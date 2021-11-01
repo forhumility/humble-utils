@@ -1,7 +1,7 @@
 /**
  * @Author       : Humility
  * @Date         : 2021-10-23 23:10:06
- * @LastEditTime : 2021-10-30 16:52:42
+ * @LastEditTime : 2021-11-01 19:12:34
  * @LastEditors  : Humility
  * @FilePath     : \humble-utils\src\date.ts
  * @Description  : 日期
@@ -18,6 +18,7 @@ import { isDate } from './check'
  * @description: 年-yyyy 季度-q 星期-EE 月-MM 日-dd 时-hh 分-mm 秒-ss 毫秒-SSS
  */
 export function dateFormat(date: Date, format = "yyyy-MM-dd hh:mm:ss", language = navigator.language) {
+    date = isDate(date) ? date : new Date(date);
     const weekZH = {
         0: "日",
         1: "一",
@@ -69,8 +70,7 @@ export function dateFormat(date: Date, format = "yyyy-MM-dd hh:mm:ss", language 
  * @return {Number} 在一年中的第几天
  */
 export function dateOfYear(date: Date) {
-    let isDateType: boolean = isDate(date);
-    date = isDateType ? date : new Date(date);
+    date = isDate(date) ? date : new Date(date);
     return Math.ceil((Date.parse(date.toString()) - Date.parse(new Date(date.getFullYear(), 0, 0).toString())) / 1000 / 60 / 60 / 24);
 };
 /**
@@ -80,5 +80,7 @@ export function dateOfYear(date: Date) {
  * @return {Number} 相差天数
  */
 export function dateDiffer(date1: Date, date2: Date) {
+    date1 = isDate(date1) ? date1 : new Date(date1);
+    date2 = isDate(date2) ? date2 : new Date(date2);
     return Math.ceil(Math.abs(date1.getTime() - date2.getTime()) / 86400000);
 }
