@@ -1,7 +1,7 @@
 /**
  * @Author       : Humility
  * @Date         : 2021-10-23 23:10:06
- * @LastEditTime : 2021-11-01 19:12:34
+ * @LastEditTime : 2021-12-30 09:36:53
  * @LastEditors  : Humility
  * @FilePath     : \humble-utils\src\date.ts
  * @Description  : 日期
@@ -17,7 +17,7 @@ import { isDate } from './check'
  * @return {String} 指定格式的时间
  * @description: 年-yyyy 季度-q 星期-EE 月-MM 日-dd 时-hh 分-mm 秒-ss 毫秒-SSS
  */
-export function dateFormat(date: Date, format = "yyyy-MM-dd hh:mm:ss", language = navigator.language) {
+export function dateFormat(date: Date, format = "yyyy-MM-dd hh:mm:ss", language = navigator ? navigator.language : 'zh-CN') {
     date = isDate(date) ? date : new Date(date);
     const weekZH = {
         0: "日",
