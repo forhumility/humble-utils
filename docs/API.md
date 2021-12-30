@@ -1,7 +1,7 @@
 <!--
  * @Author       : Humility
  * @Date         : 2021-10-25 21:00:42
- * @LastEditTime : 2021-10-30 17:25:51
+ * @LastEditTime : 2021-12-30 09:52:58
  * @LastEditors  : Humility
  * @FilePath     : \humble-utils\docs\API.md
  * @Description  : api
@@ -211,7 +211,7 @@ PC
 
 ### isMobile(str) ⇒ <code>Boolean</code>
 
-验证-电话
+验证-移动电话（手机）
 
 **Kind**: global function
 
@@ -220,13 +220,13 @@ PC
 
 | Param | Type | Description |
 | --- | --- | --- |
-| str | <code>String</code> | 电话 |
+| str | <code>String</code> | 电话号码 |
 
 <a name="isPhone"></a>
 
 ### isPhone(str) ⇒ <code>Boolean</code>
 
-验证-手机号
+验证-固定电话
 
 **Kind**: global function
 
@@ -235,7 +235,7 @@ PC
 
 | Param | Type | Description |
 | --- | --- | --- |
-| str | <code>String</code> | 手机号 |
+| str | <code>String</code> | 电话号码 |
 
 <a name="checkPwd"></a>
 
