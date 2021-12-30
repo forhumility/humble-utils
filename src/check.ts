@@ -1,7 +1,7 @@
 /**
  * @Author       : Humility
  * @Date         : 2021-10-25 19:17:46
- * @LastEditTime : 2021-12-09 20:13:27
+ * @LastEditTime : 2021-12-30 09:45:47
  * @LastEditors  : Humility
  * @FilePath     : \humble-utils\src\check.ts
  * @Description  : 验证
@@ -18,16 +18,16 @@ export function isEmail(str: string) {
   );
 }
 /**
- * 电话
- * @param {String} str 电话
+ * 移动电话（手机号）
+ * @param {String} str 移动电话（手机号）
  * @return {Boolean} 验证结果
  */
 export function isMobile(str: string) {
   return /^1[0-9]{10}$/.test(str);
 }
 /**
- * 手机号
- * @param {String} str 手机号
+ * 电话号码
+ * @param {String} str 电话号码
  * @return {Boolean} 验证结果
  */
 export function isPhone(str: string) {
@@ -327,7 +327,7 @@ export function isLicencePlate(plate: string): boolean {
     return false;
   }
 }
-const UA = navigator.userAgent.toLowerCase();
+const UA = navigator ? navigator.userAgent.toLowerCase() : "app";
 /**
  * 微信
  * @return {Boolean} 验证结果
@@ -363,17 +363,16 @@ export function isSpider(): boolean {
  * @return {Boolean} 验证结果
  */
 export function isIos(): boolean {
-  let u = navigator.userAgent;
-  if (u.indexOf("Android") > -1 || u.indexOf("Linux") > -1) {
+  if (UA.indexOf("Android") > -1 || UA.indexOf("Linux") > -1) {
     // 安卓手机
     return false;
-  } else if (u.indexOf("iPhone") > -1) {
+  } else if (UA.indexOf("iPhone") > -1) {
     // 苹果手机
     return true;
-  } else if (u.indexOf("iPad") > -1) {
+  } else if (UA.indexOf("iPad") > -1) {
     // iPad
     return false;
-  } else if (u.indexOf("Windows Phone") > -1) {
+  } else if (UA.indexOf("Windows Phone") > -1) {
     // winphone手机
     return false;
   } else {
@@ -385,7 +384,6 @@ export function isIos(): boolean {
  * @return {Boolean} 验证结果
  */
 export function isPC(): boolean {
-  let userAgentInfo = navigator.userAgent;
   let Agents = [
     "Android",
     "iPhone",
@@ -396,7 +394,7 @@ export function isPC(): boolean {
   ];
   let flag = true;
   for (let v = 0; v < Agents.length; v++) {
-    if (userAgentInfo.indexOf(Agents[v]) > 0) {
+    if (UA.indexOf(Agents[v]) > 0) {
       flag = false;
       break;
     }
