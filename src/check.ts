@@ -1,7 +1,7 @@
 /**
  * @Author       : Humility
  * @Date         : 2021-10-25 19:17:46
- * @LastEditTime : 2021-12-30 09:45:47
+ * @LastEditTime : 2022-07-13 11:20:29
  * @LastEditors  : Humility
  * @FilePath     : \humble-utils\src\check.ts
  * @Description  : 验证
@@ -65,110 +65,6 @@ export function checkPwd(pwd: string) {
     Lv++;
   }
   return Lv;
-}
-/**
- * 字符串
- * @param {String} target 要验证的对象
- * @return {Boolean} 验证结果
- */
-export function isString(target: any) {
-  return Object.prototype.toString.call(target).slice(8, -1) === "String";
-}
-/**
- * 数值
- * @param {String} target 要验证的对象
- * @return {Boolean} 验证结果
- */
-export function isNumber(target: any) {
-  return Object.prototype.toString.call(target).slice(8, -1) === "Number";
-}
-/**
- * 布尔型
- * @param {String} target 要验证的对象
- * @return {Boolean} 验证结果
- */
-export function isBoolean(target: any) {
-  return Object.prototype.toString.call(target).slice(8, -1) === "Boolean";
-}
-/**
- * 方法
- * @param {String} target 要验证的对象
- * @return {Boolean} 验证结果
- */
-export function isFunction(target: any) {
-  return Object.prototype.toString.call(target).slice(8, -1) === "Function";
-}
-/**
- * 空
- * @param {String} target 要验证的对象
- * @return {Boolean} 验证结果
- */
-export function isNull(target: any) {
-  return Object.prototype.toString.call(target).slice(8, -1) === "Null";
-}
-/**
- * 未定义
- * @param {String} target 要验证的对象
- * @return {Boolean} 验证结果
- */
-export function isUndefined(target: any) {
-  return Object.prototype.toString.call(target).slice(8, -1) === "Undefined";
-}
-/**
- * 对象
- * @param {String} target 要验证的对象
- * @return {Boolean} 验证结果
- */
-export function isObject(target: any) {
-  return Object.prototype.toString.call(target).slice(8, -1) === "Object";
-}
-/**
- * 数组
- * @param {String} target 要验证的对象
- * @return {Boolean} 验证结果
- */
-export function isArray(target: any) {
-  return Object.prototype.toString.call(target).slice(8, -1) === "Array";
-}
-/**
- * 日期
- * @param {String} target 要验证的对象
- * @return {Boolean} 验证结果
- */
-export function isDate(target: any) {
-  return Object.prototype.toString.call(target).slice(8, -1) === "Date";
-}
-/**
- * 正则
- * @param {String} target 要验证的对象
- * @return {Boolean} 验证结果
- */
-export function isRegExp(target: any) {
-  return Object.prototype.toString.call(target).slice(8, -1) === "RegExp";
-}
-/**
- * 错误
- * @param {String} target 要验证的对象
- * @return {Boolean} 验证结果
- */
-export function isError(target: any) {
-  return Object.prototype.toString.call(target).slice(8, -1) === "Error";
-}
-/**
- * 唯一
- * @param {String} target 要验证的对象
- * @return {Boolean} 验证结果
- */
-export function isSymbol(target: any) {
-  return Object.prototype.toString.call(target).slice(8, -1) === "Symbol";
-}
-/**
- * Promise
- * @param {String} target 要验证的对象
- * @return {Boolean} 验证结果
- */
-export function isPromise(target: any) {
-  return Object.prototype.toString.call(target).slice(8, -1) === "Promise";
 }
 /**
  * 综合类验证
@@ -315,10 +211,8 @@ export function isCardID(cId: string): boolean {
  * @description: 含新能源汽车
  */
 export function isLicencePlate(plate: string): boolean {
-  const xreg =
-    /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}(([0-9]{5}[DF]$)|([DF][A-HJ-NP-Z0-9][0-9]{4}$))/;
-  const creg =
-    /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-HJ-NP-Z0-9]{4}[A-HJ-NP-Z0-9挂学警港澳]{1}$/;
+  const xreg = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}(([0-9]{5}[DF]$)|([DF][A-HJ-NP-Z0-9][0-9]{4}$))/;
+  const creg = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-HJ-NP-Z0-9]{4}[A-HJ-NP-Z0-9挂学警港澳]{1}$/;
   if (plate.length == 7) {
     return creg.test(plate);
   } else if (plate.length == 8) {
@@ -327,6 +221,133 @@ export function isLicencePlate(plate: string): boolean {
     return false;
   }
 }
+
+/**
+ * 验证奇偶数
+ * @param {string} 数字
+ * @return {boolean} 是否为奇数
+ * @description: 验证奇偶数
+ */
+export function isOdd(value: number | string): boolean {
+  value = Number(value);
+  const n = Math.abs(value);
+  if (!isNumber(n)) {
+    throw new TypeError("expected a number");
+  }
+  if (!Number.isInteger(n)) {
+    throw new Error("expected an integer");
+  }
+  if (!Number.isSafeInteger(n)) {
+    throw new Error("value exceeds maximum safe integer");
+  }
+  return n % 2 === 1;
+}
+
+/**
+ * 字符串
+ * @param {String} target 要验证的对象
+ * @return {Boolean} 验证结果
+ */
+export function isString(target: any) {
+  return Object.prototype.toString.call(target).slice(8, -1) === "String";
+}
+/**
+ * 数值
+ * @param {String} target 要验证的对象
+ * @return {Boolean} 验证结果
+ */
+export function isNumber(target: any) {
+  return Object.prototype.toString.call(target).slice(8, -1) === "Number";
+}
+/**
+ * 布尔型
+ * @param {String} target 要验证的对象
+ * @return {Boolean} 验证结果
+ */
+export function isBoolean(target: any) {
+  return Object.prototype.toString.call(target).slice(8, -1) === "Boolean";
+}
+/**
+ * 方法
+ * @param {String} target 要验证的对象
+ * @return {Boolean} 验证结果
+ */
+export function isFunction(target: any) {
+  return Object.prototype.toString.call(target).slice(8, -1) === "Function";
+}
+/**
+ * 空
+ * @param {String} target 要验证的对象
+ * @return {Boolean} 验证结果
+ */
+export function isNull(target: any) {
+  return Object.prototype.toString.call(target).slice(8, -1) === "Null";
+}
+/**
+ * 未定义
+ * @param {String} target 要验证的对象
+ * @return {Boolean} 验证结果
+ */
+export function isUndefined(target: any) {
+  return Object.prototype.toString.call(target).slice(8, -1) === "Undefined";
+}
+/**
+ * 对象
+ * @param {String} target 要验证的对象
+ * @return {Boolean} 验证结果
+ */
+export function isObject(target: any) {
+  return Object.prototype.toString.call(target).slice(8, -1) === "Object";
+}
+/**
+ * 数组
+ * @param {String} target 要验证的对象
+ * @return {Boolean} 验证结果
+ */
+export function isArray(target: any) {
+  return Object.prototype.toString.call(target).slice(8, -1) === "Array";
+}
+/**
+ * 日期
+ * @param {String} target 要验证的对象
+ * @return {Boolean} 验证结果
+ */
+export function isDate(target: any) {
+  return Object.prototype.toString.call(target).slice(8, -1) === "Date";
+}
+/**
+ * 正则
+ * @param {String} target 要验证的对象
+ * @return {Boolean} 验证结果
+ */
+export function isRegExp(target: any) {
+  return Object.prototype.toString.call(target).slice(8, -1) === "RegExp";
+}
+/**
+ * 错误
+ * @param {String} target 要验证的对象
+ * @return {Boolean} 验证结果
+ */
+export function isError(target: any) {
+  return Object.prototype.toString.call(target).slice(8, -1) === "Error";
+}
+/**
+ * 唯一
+ * @param {String} target 要验证的对象
+ * @return {Boolean} 验证结果
+ */
+export function isSymbol(target: any) {
+  return Object.prototype.toString.call(target).slice(8, -1) === "Symbol";
+}
+/**
+ * Promise
+ * @param {String} target 要验证的对象
+ * @return {Boolean} 验证结果
+ */
+export function isPromise(target: any) {
+  return Object.prototype.toString.call(target).slice(8, -1) === "Promise";
+}
+
 const UA = navigator ? navigator.userAgent.toLowerCase() : "app";
 /**
  * 微信
