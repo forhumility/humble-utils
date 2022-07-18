@@ -8,6 +8,7 @@
     "outDir": "dist", // 编译后生成的文件目录
     "strict": true, // 开启严格的类型检测
     "suppressImplicitAnyIndexErrors":true,// 对象索引不警告
+    "moduleResolution": "node",
   },
   "exclude": [
     "node_modules",
