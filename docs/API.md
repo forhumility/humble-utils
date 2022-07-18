@@ -1,7 +1,7 @@
 <!--
  * @Author       : Humility
  * @Date         : 2021-10-25 21:00:42
- * @LastEditTime : 2021-12-30 09:52:58
+ * @LastEditTime : 2022-07-18 08:54:58
  * @LastEditors  : Humility
  * @FilePath     : \humble-utils\docs\API.md
  * @Description  : api
@@ -313,6 +313,20 @@ PC
 | Param | Type | Description |
 | --- | --- | --- |
 | target | <code>String</code> | 布尔型 |
+
+<a name="isOdd"></a>
+
+## isOdd(数字) ⇒ <code>boolean</code>
+
+验证奇偶数
+
+**Kind**: global function
+**Returns**: <code>boolean</code> - 是否为奇数
+**Description:**: 验证奇偶数
+
+| Param | Type |
+| --- | --- |
+| 数字 | <code>string</code> |
 
 <a name="isFunction"></a>
 
