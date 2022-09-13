@@ -1,7 +1,7 @@
 /**
  * @Author       : Humility
  * @Date         : 2021-10-25 19:17:46
- * @LastEditTime : 2022-07-13 11:20:29
+ * @LastEditTime : 2022-09-13 10:09:01
  * @LastEditors  : Humility
  * @FilePath     : \humble-utils\src\check.ts
  * @Description  : 验证
@@ -170,17 +170,17 @@ export function isCardID(cId: string): boolean {
     82: "澳门",
     91: "国外",
   };
-  if (!aCity[cId.substr(0, 2)]) {
+  if (!aCity[cId.substring(0, 2)]) {
     console.warn("你的身份证地区非法");
     return false;
   }
   // 出生日期验证
   let sBirthday = (
-      cId.substr(6, 4) +
+      cId.substring(6, 10) +
       "-" +
-      Number(cId.substr(10, 2)) +
+      Number(cId.substring(10, 12)) +
       "-" +
-      Number(cId.substr(12, 2))
+      Number(cId.substring(12, 14))
     ).replace(/-/g, "/"),
     d = new Date(sBirthday);
   if (
@@ -211,8 +211,10 @@ export function isCardID(cId: string): boolean {
  * @description: 含新能源汽车
  */
 export function isLicencePlate(plate: string): boolean {
-  const xreg = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}(([0-9]{5}[DF]$)|([DF][A-HJ-NP-Z0-9][0-9]{4}$))/;
-  const creg = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-HJ-NP-Z0-9]{4}[A-HJ-NP-Z0-9挂学警港澳]{1}$/;
+  const xreg =
+    /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}(([0-9]{5}[DF]$)|([DF][A-HJ-NP-Z0-9][0-9]{4}$))/;
+  const creg =
+    /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-HJ-NP-Z0-9]{4}[A-HJ-NP-Z0-9挂学警港澳]{1}$/;
   if (plate.length == 7) {
     return creg.test(plate);
   } else if (plate.length == 8) {
