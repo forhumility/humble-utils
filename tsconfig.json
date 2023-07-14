@@ -1,21 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es6", // 指定ECMAScript目标版本
-    "module": "esnext", // 指定模块化类型
-    "lib":["ES2017","ES7","ES6","DOM"],
-    "declaration": true, // 生成 `.d.ts` 文件
-    "allowJs": false, // 允许编译js
-    "outDir": "dist", // 编译后生成的文件目录
-    "strict": true, // 开启严格的类型检测
-    "suppressImplicitAnyIndexErrors":true,// 对象索引不警告
-    "moduleResolution": "node",
+    "target": "es6",
+    "module": "esnext",
+    "lib": ["ES2017", "ES7", "ES6", "DOM"],
+    "declaration": true,
+    "allowJs": false,
+    "outDir": "dist",
+    "strict": true,
+    "moduleResolution": "node"
   },
-  "exclude": [
-    "node_modules",
-    "public",
-    "dist",
-    "js",
-    "docs",
-    "test"
-  ] // 不需要编译目录
+  "exclude": ["node_modules", "public", "dist", "js", "docs", "test"]
 }
