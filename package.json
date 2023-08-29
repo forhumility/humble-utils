@@ -1,27 +1,29 @@
 {
-    "name": "humble-utils",
-    "version": "0.5.0",
-    "description": "javascript utils",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "tsc",
-        "docs": "jsdoc2md dist/src/*.js > docs2md.md"
-    },
-    "keywords": [
-        "humility",
-        "humble",
-        "utils",
-        "format"
-    ],
-    "author": "humility",
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:forhumility/humble-utils.git"
-    },
-    "license": "MIT",
-    "devDependencies": {
-        "jsdoc-to-markdown": "^7.1.0"
-    }
+  "name": "humble-utils",
+  "version": "0.5.0",
+  "description": "javascript utils",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "docs": "jsdoc2md dist/src/*.js > docs2md.md"
+  },
+  "keywords": [
+    "humility",
+    "humble",
+    "utils",
+    "format"
+  ],
+  "author": "humility",
+  "homepage":"https://forhumility.github.io/humble-utils",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:forhumility/humble-utils.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "jsdoc-to-markdown": "^7.1.0",
+    "typescript": "^5.2.2"
+  }
 }
