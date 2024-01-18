@@ -1,12 +1,14 @@
 /**
  * @Author       : Humility
  * @Date         : 2021-10-25 19:17:46
- * @LastEditTime : 2022-09-13 10:09:01
+ * @LastEditTime : 2024-01-12 09:57:10
  * @LastEditors  : Humility
  * @FilePath     : \humble-utils\src\check.ts
  * @Description  : 验证
  */
-
+interface CityObject {
+  [key: string]: string;
+}
 /**
  * 邮箱
  * @param {String} str 邮箱
@@ -133,7 +135,7 @@ export function isCardID(cId: string): boolean {
     return false;
   }
   // 身份证城市
-  let aCity = {
+  let aCity: CityObject = {
     11: "北京",
     12: "天津",
     13: "河北",
@@ -170,7 +172,7 @@ export function isCardID(cId: string): boolean {
     82: "澳门",
     91: "国外",
   };
-  if (!aCity[cId.substring(0, 2)]) {
+  if (aCity[cId.substring(0, 2)] == undefined) {
     console.warn("你的身份证地区非法");
     return false;
   }
@@ -205,12 +207,12 @@ export function isCardID(cId: string): boolean {
   return true;
 }
 /**
- * 验证车牌号
+ * 验证合法车牌号
  * @param {string} plate 车牌号
- * @return {boolean} 是否为车牌号
+ * @return {boolean} 是否为合法车牌号
  * @description: 含新能源汽车
  */
-export function isLicencePlate(plate: string): boolean {
+export function isLicensePlate(plate: string): boolean {
   const xreg =
     /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}(([0-9]{5}[DF]$)|([DF][A-HJ-NP-Z0-9][0-9]{4}$))/;
   const creg =
@@ -260,6 +262,14 @@ export function isString(target: any) {
  */
 export function isNumber(target: any) {
   return Object.prototype.toString.call(target).slice(8, -1) === "Number";
+}
+/**
+ * NaN
+ * @param {String} target 要验证的对象
+ * @return {Boolean} 验证结果
+ */
+export function isNaN(target: any) {
+  return Number.isNaN(target);
 }
 /**
  * 布尔型
